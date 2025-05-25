@@ -1,0 +1,28 @@
+[project]
+name = "campusx-fast-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.115.12",
+    "pandas>=2.2.3",
+    "pydantic>=2.11.5",
+    "uvicorn>=0.34.2",
+]
+[tool.ruff]
+target-version = "py39"
+line-length = 88
+select = [
+  "F", "E", "W", "I", "N", "B", "UP", "D", "C4", "TID", "PD"
+]
+ignore = [
+  "D100", "D104", "D107", "E402"
+]
+include = ["*.py", "*.ipynb"]
+exclude = [".venv", "__pycache__", "build", "dist", ".ipynb_checkpoints"]
+
+[tool.uv.workspace]
+members = [
+    "campusx_fast_api",
+]
